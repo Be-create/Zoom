@@ -1,7 +1,16 @@
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { Home } from "./components/Home";
+import { Video } from "./components/Video";
+
 export const App = () => {
   return (
     <div>
-      <h1>React Zoom App</h1>
+      <Router>
+        <Routes>
+          <Route path="/" Component={Home} />
+          <Route path="/:url" Component={Video} />
+        </Routes>
+      </Router>
     </div>
   );
 };
