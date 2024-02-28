@@ -1,14 +1,8 @@
 import { AppBar, Box, Typography } from "@mui/material";
 import { Options } from "./Options";
 import { Notifications } from "./Notifications";
-import { io } from "socket.io-client";
 
 export const Home = () => {
-  const socket = io("http://localhost:5000/");
-  socket.on("connect", () => {
-    alert(`you connected with id : ${socket.id}`);
-    socket.emit("send-message", "something");
-  });
   return (
     <Box
       sx={{
