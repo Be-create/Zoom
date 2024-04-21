@@ -1,6 +1,7 @@
 import { AppBar, Box, Typography } from "@mui/material";
 import { Options } from "./Options";
 import { Notifications } from "./Notifications";
+import { Navbar } from "./Navbar";
 
 export const Home = () => {
   return (
@@ -8,27 +9,13 @@ export const Home = () => {
       sx={{
         display: "flex",
         flexDirection: "column",
-        gap: "20px",
-        justifyContent: "center",
-        alignItems: "center",
+
         width: "100vw",
+        height: "100vh",
+        backgroundColor: "rgb(1 41 62)",
       }}
     >
-      <AppBar
-        sx={{
-          height: "20px",
-          width: "100%",
-          display: "flex",
-          justifyContent: "center",
-          position: "relative",
-          textAlign: "center",
-        }}
-      >
-        <Typography>VIDEO CHAT</Typography>
-      </AppBar>
-      <Options>
-        <Notifications></Notifications>
-      </Options>
+      <Navbar />
     </Box>
   );
 };
